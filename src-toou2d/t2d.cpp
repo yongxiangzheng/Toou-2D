@@ -165,7 +165,7 @@ QString T2D::awesomeFromKey(const QString &key)
 {
     if(!key.isEmpty()){
         int index = Toou2D_Awesome::staticMetaObject.indexOfEnumerator("Toou2D_AwesomeType");
-        return QString(Toou2D_Awesome::staticMetaObject.enumerator(index).keysToValue(key.toStdString().c_str()));
+        return QString::number(Toou2D_Awesome::staticMetaObject.enumerator(index).keysToValue(key.toStdString().c_str()));
     }
 
     return QString();
@@ -173,7 +173,7 @@ QString T2D::awesomeFromKey(const QString &key)
 
 QString T2D::awesomeFromValue(int type)
 {
-    return QString(type);
+    return QString::number(type);
 }
 
 QStringList T2D::awesomelist()

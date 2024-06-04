@@ -171,7 +171,7 @@ ThemeBinder *ThemeBinder::childs(int i) const
 
 QQmlListProperty<ThemeBinder> ThemeBinder::childs()
 {
-    return QQmlListProperty<ThemeBinder>(this, m_childs);
+    return QQmlListProperty<ThemeBinder>(this, &m_childs);
 }
 
 ThemeBinder *ThemeBinder::parent() const
